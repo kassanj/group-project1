@@ -21,21 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :category %><br>
-    <%= f.text_field :category %> 
-    <select name="mydropdown">
-      <option value="Game">Game</option>
-      <option value="Film">Film</option>
-      <option value="Music">Music</option>
-    </select>
+    <%= f.select :category, [["Games", 1], ["Film", 2], ["Music", 3]] %> 
   </div>
    <div class="field">
     <%= f.label :mood %><br>
-    <%= f.text_field :mood %>
-    <select name="mydropdown">
-      <option value="Chill">Chill</option>
-      <option value="Andante">Andante</option>
-      <option value="Energetic">Energetic</option>
-    </select>
+    <%= f.select :mood, [["Chill", 1], ["Offbeat", 2], ["Epic", 3]] %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
