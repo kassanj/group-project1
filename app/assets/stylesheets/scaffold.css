@@ -1,4 +1,6 @@
-body { background-color: #fff; color: #333; }
+body { background-color: white; color: black;
+}
+
 
 body, p, ol, ul, td {
   font-family: Avenir;
@@ -7,6 +9,35 @@ body, p, ol, ul, td {
   margin: 40px 0px; 
   padding: 0px;
   text-align:center;
+}
+
+#container {
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+}
+
+ul:first-child  {
+      margin-top: 0
+}
+
+div.item {
+  text-align: center;
+}
+
+div.action-overlay {
+  background-color: white;
+  opacity: 0.5;
+  position: relative;
+  top: -110px;
+  margin: 0 auto;
+  width: 90%;
+  display: none;
+}
+
+div.action-overlay a {
+      color: black;
+      opacity: 1.0
 }
 
 pre {
@@ -26,6 +57,8 @@ a:hover { color: #fff; }
 
 img {
     border-style: solid;
+    width: 640px;
+    height: 350px;
 }
 
 ul#sort-by li {
@@ -37,7 +70,7 @@ ul#sort-by li {
 } 
 
 #sort-by a {
- color: black;
+    color: black;
 }
 
 a.footer {
@@ -46,8 +79,12 @@ a.footer {
 .options {
   position: absolute;
   bottom: 0px;
-  z-index: 100;
   color: white;
+}
+
+
+.item {
+    padding: 0px;
 }
 
 li.options div {

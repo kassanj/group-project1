@@ -4,7 +4,20 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.all
+
+    category = params[:category]
+    mood = params[:mood]
+    if category.nil? and mood.nil?
+      @pictures = Picture.all
+    elsif category
+      @pictures = Picture.where(category: category)
+    elsif mood
+      @pictures = Picture.where(mood: mood)
+    else
+      puts "I don't know why I'm here"
+      @pictures = Picture.all
+    end
+
   end
 
   # GET /pictures/1

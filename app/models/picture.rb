@@ -7,12 +7,12 @@ class Picture < ActiveRecord::Base
 		scope :film, -> { where(category: 2)}
 		scope :music, -> { where(category: 3)}
 
-		scope :chill, -> { where(category: 1)}
-		scope :offbeat, -> { where(category: 2)}
-		scope :epic, -> { where(category: 3)}
+		scope :chill, -> { where(mood: 1)}
+		scope :offbeat, -> { where(mood: 2)}
+		scope :epic, -> { where(mood: 3)}
 
 
-		def status
+		def category_name
 			case category
 			when 1 then "Games"
 			when 2 then "Film"
@@ -20,7 +20,7 @@ class Picture < ActiveRecord::Base
 			end
 		end
 
-		def emotion
+		def mood_name
 			case mood
 			when 1 then "Chill"
 			when 2 then "Offbeat"

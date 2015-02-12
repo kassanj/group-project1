@@ -8,27 +8,21 @@
     <li><a href="date">release date</a></li>
 </ul>
 
-<div id="container" class="js-masonry" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 200 }'>
-    <% @pictures.each do |picture| %>
+<div id="container">
+  <% @pictures.each do |picture| %>
+  <div class="item">
+    <%= image_tag picture.url %>
+    <div class="action-overlay">
       <ul>
-      <div class="item">
-        <li><%= image_tag picture.url %></li>
-        <li><%# picture.title %></li>
-        <li><%# picture.status %></li>
-        <li><%# picture.emotion %></li>
-        <li><%# long_date(picture.date) %></li>
-        <li class='options'>
-          <div><%= link_to 'SHOW', picture %></div>
-          <div><%= link_to 'EDIT', edit_picture_path(picture) %></div>
-          <div><%= link_to 'DESTROY', picture, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        </li>
-       </div>
-      </ul>
-<% end %>
-</div>
+      <li><%= link_to 'SHOW', picture %>
+      <li><%= link_to 'EDIT', edit_picture_path(picture) %>
+      <li><%= link_to 'DESTROY', picture, method: :delete, data: { confirm: 'Are you sure?' } %> </ul>
+      </div>
+      </div>
+    <% end %>
+  </div>
 
 <br>
 
 <%= link_to 'New Picture', new_picture_path, class: "footer" %>
-
 
