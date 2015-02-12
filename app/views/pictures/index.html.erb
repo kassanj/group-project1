@@ -13,20 +13,28 @@
       <th colspan="3"></th>
     </tr>
   </thead> -->
-
+<div id="container" class="js-masonry" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 200 }'>
     <% @pictures.each do |picture| %>
       <ul>
-        <li><%# picture.title %></li> -->
+      <div class="item">
+        <li><%# picture.title %></li>
         <li><%= image_tag picture.url %></li>
         <li><%# picture.status %></li>
         <li><%# picture.emotion %></li>
         <li><%# long_date(picture.date) %></li>
-        <li><%= link_to 'Show', picture %></li>
-        <li><%= link_to 'Edit', edit_picture_path(picture) %></li>
-        <li><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        
+
+        <li><%= link_to 'Show', picture, class:'options' %></li>
+        <li><%= link_to 'Edit', edit_picture_path(picture), class:'options' %></li>
+        <li><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }, class:'options' %></li>
+    </div>
       </ul>
     <% end %>
+</div>
+
 <!-- </table> -->
 <br>
 
 <%= link_to 'New Picture', new_picture_path %>
+
+
