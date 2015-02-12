@@ -3,60 +3,37 @@
 
 
 $( document ).on('ready page:load', function() {
-  $('.options').hide();
+	$('.options').hide();
 });
-
-// $(function(){  
-//   $('li').each(function(event){
-//   	$(this).mouseenter(function(){
-//   		$('.options').fadeIn('slow'); 
-//   	});
-
-//   	$(this).mouseleave(function(){
-//   		$('.options').fadeOut('slow');
-//   	});
-//   });
-// });
 
 $(function(){
-	$('li').mouseenter(function(){
-		console.log("sdfgsdfgsdf");
-		$(this).siblings().children('.options').fadeIn('slow');
+	$('.item').mouseenter(function(){
+		$(this).children('.options').fadeIn('slow');
 	});
-	$('li').mouseleave(function(){
-		console.log("sdfgsdfgsdf");
-		$(this).siblings().children('.options').fadeOut('slow');
+	$('.item').mouseleave(function(){
+		$(this).children('.options').fadeOut('slow');
 	});
 });
-
-// $(function(){  
-//   $('li').each(function(event){
-//   	$(this).mouseleave(function(){
-//   		$('.options').fadeOut('slow');
-//   	});
-//   });
- //  	console.log('ghello');
-	// 	$(this).fadeIn('slow'); 
-	// });
-
-	// }); 
-
-// 	// $('.options').mouseleave(function(){
-// 	// 	$(this).fadeOut('slow');
-// // 	}); 
+// $(function(){
+// $('#container').masonry({
+//   columnWidth: 50
+// });
 // });
 
+// $(function(){ 
+// 	 // $('.item').isotope({ sortby : 'movie'});
+//   // });
+//      $('#sort-by a').click(function(){
+//   // get href attribute, minus the '#'
+//      var sortName = $(this).attr('href').slice(1);
+//      $('#container').isotope({ sortBy : sortName });
+//      return false;
+//     });
 
-// $(document).ready(function(
-// 	$('options')
-// 	console.log("Hello World");
-// )};
 
-// var container = document.querySelector('#container');
-// var msnry = new Masonry( container, {
-//   // options...
-//   itemSelector: '.item',
-//   columnWidth: 200
-// });
+
+
+
+
 
 
