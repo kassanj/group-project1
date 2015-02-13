@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @picture, class: "footer"  %> |
-<%= link_to 'Back', pictures_path, class: "footer"  %>
+<%= link_to 'Back', pictures_path, class: "footer"  %> |
+<%= link_to 'Delete', @picture.destroy, class: "footer"  %>

@@ -47,12 +47,17 @@ div.action-overlay {
   opacity: 0.5;
   top: -315px;
   margin: 0 auto;
-  width: 100%;
+  width: 87%;
   height: 100%;
   display: none;
   margin-top: -100px;
   padding-top: -700px;
   padding: 30px;
+}
+
+iframe {
+ width: 1280px;
+ height: 720px;
 }
 
 div.action-overlay a {
@@ -92,12 +97,18 @@ ul#sort-by li {
   list-style-type: none; 
   border-style: solid;
   color: white;
-
- 
 } 
+
+ul#sort-by li:hover {
+  background-color: honeydew;
+}
 
 #sort-by a {
     color: white;
+}
+
+#sort-by a:hover {
+  color: black;
 }
 
 a.footer {
@@ -127,7 +138,9 @@ div.field, div.actions {
 }
 
 #notice {
-  color: purple;
+  color: springgreen;
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow', sans-serif;;
 }
 
 .field_with_errors {
@@ -165,8 +178,14 @@ select#picture_category, select#picture_mood {
 
 input {
     font-size: 25px;
-    margin-top: 30px;
+    margin-top: 30px;  
 }
+
+input[type=submit] {
+    width: 5em;  
+    height: 
+}
+
 
 #error_explanation {
   width: 450px;
