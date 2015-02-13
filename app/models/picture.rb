@@ -1,4 +1,5 @@
 class Picture < ActiveRecord::Base
+	has_many :comments
 
 		validates :category, inclusion:(1..3)
 		validates :mood, inclusion:(1..3)
