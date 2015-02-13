@@ -1,30 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @picture.title %>
-</p>
-
-<p>
   <%= image_tag @picture.url %>
  </p>
 
-<p>
- <strong>Category:</strong>
- <%= @picture.category %>
- </p>
-
  <p>
- <strong>Mood:</strong>
-  <%= @picture.mood %>
+  <strong>Title:</strong>
+  <%= @picture.title %>
 </p>
-
 <p>
 <strong>Date:</strong>
   <%= long_date(@picture.date) %>
 </p>
 
-
+<br>
+<br>
+<br>
 
 <%= link_to 'Edit', edit_picture_path(@picture), class: "footer" %> |
 <%= link_to 'Back', pictures_path, class: "footer" %>
