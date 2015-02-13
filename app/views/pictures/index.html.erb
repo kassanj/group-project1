@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>PREVIEWS</h1>
+<h1>ON THE LOOKOUT</h1>
 
 <ul id="sort-by">
 
@@ -14,10 +14,7 @@
   <% @pictures.each do |picture| %>
   <div class="item">
     <%= image_tag picture.url %>
-    <div class="action-overlay">
-      <ul>
-      <li><%= link_to 'SHOW', picture %></li>
-      </div>
+    <div class="action-overlay"><%= link_to 'SHOW', picture %></div>
       </div>
     <% end %>
   </div>

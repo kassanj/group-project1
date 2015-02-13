@@ -1,6 +1,5 @@
-body { background-color: white; color: black;
-}
-
+body { color: white; padding: 60px;
+background-color: black}
 
 body, p, ol, ul, td {
   font-family: Avenir;
@@ -8,9 +7,17 @@ body, p, ol, ul, td {
   line-height: 30px;
   margin: 40px 0px; 
   padding: 0px;
-  text-align:center;
+  text-align: center;
+  padding-top: 20px;
 }
 
+h1 { 
+    font-size: 60px;
+    font-family: Avenir;
+    font-style: italic;
+    color: white;
+    padding-bottom: 50px;
+}
 
 pre {
   background-color: #eee;
@@ -22,6 +29,7 @@ pre {
   -webkit-column-count: 3;
      -moz-column-count: 3;
           column-count: 3;
+          padding-top: 80px;
 }
 
 ul:first-child  {
@@ -35,31 +43,45 @@ div.item {
 
 div.action-overlay {
   background-color: white;
+  text-align:center;
   opacity: 0.5;
-/*  position: relative;*/
-  top: -110px;
+  top: -315px;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
+  height: 100%;
   display: none;
+  margin-top: -100px;
+  padding-top: -700px;
+  padding: 30px;
 }
 
 div.action-overlay a {
-      color: black;
-      opacity: 1.0
+  /*height: 50%*/;
+  color: black;
+  opacity: 1.0;
+  font-size: 28px ;
+  text-decoration: none;
+  padding-top: 14px;
+  padding-bottom: 50px;
+  margin-top: -10px;
+  top: -340px;
+  position: center;
+
 }
 
-a { color: #fff; }
+a { color: #fff; 
+  text-decoration: none
+}
 a:visited { color: #fff; }
 a:hover { color: #fff; }
 
-.items {
-  position: relative;
-  border: solid red;
-}
 
 img {
     width: 640px;
     height: 350px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: honeydew;
 }
 
 ul#sort-by li {
@@ -67,14 +89,19 @@ ul#sort-by li {
   padding: 30px;
   font-size: 20px;
   text-transform: uppercase;
-  list-style-type: none;
+  list-style-type: none; 
+  border-style: solid;
+  color: white;
+
+ 
 } 
 
 #sort-by a {
-    color: black;
+    color: white;
 }
+
 a.footer {
-    color: black;
+    color: white;
 }
 
 .options {
@@ -82,7 +109,6 @@ a.footer {
   bottom: 0px;
   color: white;
 }
-
 
 .item {
     padding: 0px;
@@ -97,6 +123,7 @@ li.options div {
 
 div.field, div.actions {
  margin-bottom: 10px;
+
 }
 
 #notice {
@@ -107,6 +134,38 @@ div.field, div.actions {
   padding: 2px;
   background-color: red;
   display: table;
+}
+
+form {
+     font-size: 40px;
+     padding: 30px;
+}
+
+.field {
+      padding: 50px;
+  }
+
+input[type="text"] {
+    width: 200px;
+    height: 30px;
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+p {
+  font-size: 35px;
+  margin-top: 5px;
+  color: white;
+}
+
+select#picture_category, select#picture_mood {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+input {
+    font-size: 25px;
+    margin-top: 30px;
 }
 
 #error_explanation {
@@ -135,5 +194,6 @@ div.field, div.actions {
 }
 
 ul { 
-  list-style-type: none
+  list-style-type: none;
+  margin-top: 40px;
 }

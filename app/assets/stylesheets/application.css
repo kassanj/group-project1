@@ -34,7 +34,7 @@ div.action-overlay {
   background-color: white;
   opacity: 0.5;
 /*  position: relative;*/
-  top: -110px;
+  /*top: -110px;
   margin: 0 auto;
   width: 90%;
   display: none;
@@ -96,4 +96,4 @@ li.options div {
 ul { 
   list-style-type: none
 }
-
+*/
