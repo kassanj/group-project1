@@ -3,9 +3,11 @@
 <h1>PREVIEWS</h1>
 
 <ul id="sort-by">
-    <li><a href="category">category</a></li>
-    <li><a href="mood">mood</a></li>
-    <li><a href="date">release date</a></li>
+
+    <li><%= link_to "games", category: 1 %></li>
+    <li><%= link_to "film", category: 2 %></li>
+    <li><%= link_to "music", category: 3 %></li>
+
 </ul>
 
 <div id="container">
@@ -14,9 +16,7 @@
     <%= image_tag picture.url %>
     <div class="action-overlay">
       <ul>
-      <li><%= link_to 'SHOW', picture %>
-      <li><%= link_to 'EDIT', edit_picture_path(picture) %>
-      <li><%= link_to 'DESTROY', picture, method: :delete, data: { confirm: 'Are you sure?' } %> </ul>
+      <li><%= link_to 'SHOW', picture %></li>
       </div>
       </div>
     <% end %>
@@ -24,5 +24,10 @@
 
 <br>
 
-<%= link_to 'New Picture', new_picture_path, class: "footer" %>
+<footer>
+<%= link_to 'New Picture', new_picture_path, class: "footer"%> | 
+<%= link_to 'Back', pictures_path, class: "footer"  %>
+</footer>
+
+
 

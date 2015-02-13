@@ -4,11 +4,18 @@ body { background-color: white; color: black;
 
 body, p, ol, ul, td {
   font-family: Avenir;
-  font-size:   13px;
+  font-size:   20px;
   line-height: 30px;
   margin: 40px 0px; 
   padding: 0px;
   text-align:center;
+}
+
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
 }
 
 #container {
@@ -23,12 +30,13 @@ ul:first-child  {
 
 div.item {
   text-align: center;
+  padding: 20px ;
 }
 
 div.action-overlay {
   background-color: white;
   opacity: 0.5;
-  position: relative;
+/*  position: relative;*/
   top: -110px;
   margin: 0 auto;
   width: 90%;
@@ -38,12 +46,6 @@ div.action-overlay {
 div.action-overlay a {
       color: black;
       opacity: 1.0
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
 }
 
 a { color: #fff; }
@@ -56,7 +58,6 @@ a:hover { color: #fff; }
 }
 
 img {
-    border-style: solid;
     width: 640px;
     height: 350px;
 }
@@ -72,10 +73,10 @@ ul#sort-by li {
 #sort-by a {
     color: black;
 }
-
 a.footer {
     color: black;
 }
+
 .options {
   position: absolute;
   bottom: 0px;

@@ -2,10 +2,10 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(function(){
-	$('.item').hover(function(evt){
-		$(evt.target).closest('img.action-overlay') 
-		 $('.action-overlay').fadeIn('slow');
+	$('img').mouseenter(function(evt){
+		$(evt.target).siblings('.action-overlay').fadeIn('slow'); 
+     });
+	$('img').mouseleave(function(evt){
+		$(evt.target).siblings('.action-overlay').fadeOut('slow'); 
 	});
 });
-
-//
