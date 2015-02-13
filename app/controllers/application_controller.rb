@@ -22,10 +22,3 @@ class ApplicationController < ActionController::Base
   end
 
 end
-
-
-
-
-=======
-end
->>>>>>> a72c7c69936171e0dfb5d3ff02ae7c77e57e6310
