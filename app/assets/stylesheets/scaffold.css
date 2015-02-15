@@ -75,7 +75,9 @@ div.action-overlay a {
 }
 
 a { color: #fff; 
-  text-decoration: none
+    text-decoration: none;
+    
+
 }
 a:visited { color: #fff; }
 a:hover { color: #fff; }
@@ -121,6 +123,10 @@ a.footer {
   color: white;
 }
 
+label {
+     font-size: 22px
+}
+
 .item {
     padding: 0px;
 }
@@ -151,14 +157,13 @@ div.field, div.actions {
 
 form {
      font-size: 40px;
-     padding: 30px;
+     padding: 0px;
      display: inline-block;
-
 }
 
 .field {
-      padding: 50px;
-  }
+      padding: 30px;
+}
 
 input[type="text"] {
     width: 200px;
@@ -187,7 +192,6 @@ input[type=submit] {
     width: 5em;  
     height: 
 }
-
 
 #error_explanation {
   width: 450px;
@@ -227,3 +231,12 @@ ul {
       width: 256px;
       height: 256px;
 }
+
+.comment_list {
+      margin-left: 340px;
+      padding: 40px;
+}
+
+/*form#new_comment.new_comment {
+      margin-bottom: 200px;
+}*/

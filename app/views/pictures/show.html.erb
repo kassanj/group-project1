@@ -12,19 +12,22 @@
   <%= @picture.title %>
 </p>
 <p>
-<strong>Date:</strong>
+<strong>Release Date:</strong>
   <%= long_date(@picture.date) %>
 </p>
 
+<%= render 'comments/form'%>
 
-<h3>Comments</h3>
+<p>
+<strong>Comments:</strong>
 <% @picture.comments.each do |comment| %>
   <div>
     <p><%= comment.body %></p>
-    <p><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p font-size="2px"><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
 <% end %>
-<%= render 'comments/form' %>
+<p>
+
 
 <%= link_to 'Edit', edit_picture_path(@picture), class: "footer" %> |
-<%= link_to 'Back', pictures_path, class: "footer" %>
+<%= link_to 'Back', pictures_path, class: "footer" %> 
