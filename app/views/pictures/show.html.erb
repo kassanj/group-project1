@@ -16,6 +16,7 @@
   <%= long_date(@picture.date) %>
 </p>
 
+<<<<<<< HEAD
 <%= render 'comments/form'%>
 
 <p>
@@ -28,6 +29,17 @@
 <% end %>
 <p>
 
+=======
+
+<h3>Comments</h3>
+<% @picture.comments.each do |comment| %>
+  <div>
+    <p><%= comment.body %></p>
+    <p><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+<% end %>
+<%= render 'comments/form' %>
+>>>>>>> 5708fb0b8e6284581c88814d0819f30d5b3189f0
 
 <%= link_to 'Edit', edit_picture_path(@picture), class: "footer" %> |
 <%= link_to 'Back', pictures_path, class: "footer" %> 
