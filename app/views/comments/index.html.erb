@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Comments</h1>
+
+<<<<<<< HEAD
+<table class='comment_list'>
+  <thead>
+    <tr>
+      <th>Comment</th>
+=======
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+>>>>>>> 5708fb0b8e6284581c88814d0819f30d5b3189f0
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.body %></td>
+        <td><%= comment.picture_id %></td>
+<<<<<<< HEAD
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><% link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+=======
+        <td><%= link_to 'Show', comment %></td>
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+>>>>>>> 5708fb0b8e6284581c88814d0819f30d5b3189f0
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment', new_comment_path %>

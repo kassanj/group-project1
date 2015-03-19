@@ -1,35 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pictures</h1>
+<h1>ON THE LOOKOUT</h1>
 
-<table align="center">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th>Category</th>
-      <th>Mood</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<ul id="sort-by">
 
-  <tbody>
-    <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.title %></td>
-        <td><%= image_tag picture.url %></td>
-        <td><%= picture.status %></td>
-        <td><%= picture.emotion %></td>
-        <td><%= long_date(picture.date) %></td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <li><%= link_to "games", category: 1 %></li>
+    <li><%= link_to "film", category: 2 %></li>
+    <li><%= link_to "music", category: 3 %></li>
+
+</ul>
+
+<div id="container">
+  <% @pictures.each do |picture| %>
+  <div class="item">
+    <%= image_tag picture.url %>
+    <div class="action-overlay"><%= link_to 'SHOW', picture %></div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
 <br>
 
-<%= link_to 'New Picture', new_picture_path %>
+<footer>
+<%= link_to 'New Video', new_picture_path, class: "footer"%> | 
+<%= link_to 'Back', pictures_path, class: "footer"  %>
+</footer>
+
+
+
